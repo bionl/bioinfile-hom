@@ -59,6 +59,27 @@ The taxonomic boundaries calculated in this process are based on established thr
 - Unmapped → If classification is inconsistent at all levels.
 
 ## Output files
+- **statistics.txt**: Summary of read distribution across different categories, including total, invalid, unmapped, valid, mapped, and their classification at species, genus, and family levels.
+- **invalid_reads.txt**: List of all invalid reads.
+- **unmapped_reads.txt**: List of all unmapped reads.
+- **reads.txt**: Table displaying the classification of all reads, including their assigned categories.
+
+  | Read ID  | Category          | Classification |
+  |----------|------------------|----------------|
+  | Read_1   | mapped_species   | k__Bacteria;p__Firmicutes;c__Clostridia… |
+  | Read_2   | invalid          | - |
+
+- **features.txt**: Table showing taxonomies identified in each sample along with their absolute abundances. Each row represents a unique taxonomy. To avoid double counting, species-level classifications (e.g., *Escherichia coli*) are separated from genus-level (*Escherichia*) and family-level (*Enterobacteriaceae*) classifications.
+
+  | Taxon ID   | Sample1 | Sample2 | Sample3 |
+  |-----------|---------|---------|---------|
+  | Feature_1 | 10      | 5       | 0       |
+  | Feature_2 | 3       | 8       | 2       |
+
+- **species.txt**: Similar to the *features.txt* table but includes only species-level classifications.
+- **genus.txt**: Contains genus-level classifications, combining counts from species (e.g., *Escherichia coli*) and reads assigned only to the genus level (e.g., *Escherichia*).
+- **family.txt**: Shows family-level classifications by summing species, genus, and family-only assignments. The total count in this table represents all mapped reads.
+
 
 ## References
 - NCBI BLAST+: https://blast.ncbi.nlm.nih.gov/Blast.cgi
