@@ -80,7 +80,6 @@ The taxonomic boundaries calculated in this process are based on established thr
 - **genus.txt**: Contains genus-level classifications, combining counts from species (e.g., *Escherichia coli*) and reads assigned only to the genus level (e.g., *Escherichia*).
 - **family.txt**: Shows family-level classifications by summing species, genus, and family-only assignments. The total count in this table represents all mapped reads.
 
-
 ## References
 - NCBI BLAST+: https://blast.ncbi.nlm.nih.gov/Blast.cgi
 - BioInfile 16S Reference Database: https://www.bioinfile.com/databases 
